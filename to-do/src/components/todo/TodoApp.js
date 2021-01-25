@@ -4,6 +4,7 @@ import AuthenticateRoute from './AuthenticateRoute';
 import HeaderComponent from './HeaderComponent';
 import ListTodosComponent from './ListTodosComponent';
 import LoginComponent from './LoginComponent';
+import TodoComponent from './TodoComponent';
 import HelloWorldService from '../../api/todo/HelloWorldService.js'
 
 export default class TodoApp extends Component {
@@ -16,6 +17,7 @@ export default class TodoApp extends Component {
                         <Route path="/" exact component={LoginComponent}/>
                         <Route path="/login" component={LoginComponent}/>
                         <AuthenticateRoute path="/welcome/:name" component={WelcomeComponent}/>
+                        <AuthenticateRoute path="/todos/:id" component={TodoComponent}/>
                         <AuthenticateRoute path="/todos" component={ListTodosComponent}/>
                         <Route path="/logout" component={LogoutComponent}/>
                         <Route component={ErrorComponent}/>
